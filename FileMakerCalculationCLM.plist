@@ -37,11 +37,11 @@ INSTRUCTIONS:
 "FileMaker Calculation" as the language for your file.
 
 CHANGE HISTORY 
-- 08/19/2008: First Release
+- 08/19/2008: First release
 - 08/21/2008: Added more keywords (thanks Rob Russell and Ray Cologon)
 - 02/25/2025: Added .fmfn extension; added square brackets; removed
 operators from identifier list; added new FileMaker functions
-and keywords from Claris website. Put under MIT License;  
+and keywords from Claris website. Put under MIT License. Uploaded to GitHub.
 
 -->
 <dict>
