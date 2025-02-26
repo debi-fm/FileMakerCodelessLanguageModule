@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<!--
+
+PURPOSE: A BBEdit Codeless Language Module for colorizing FileMaker Pro
+Calculation Expressions.
+
+Copyright (c) 2008-2025 Debi Fuchs
+
+MIT LICENSE:
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+
+INSTRUCTIONS:
+- Place this file at ~/Library/Application Support/BBEdit/Language Modules/
+- Name your files with ".fmfn" extension or otherwise choose
+"FileMaker Calculation" as the language for your file.
+
+CHANGE HISTORY 
+- 08/19/2008: First Release
+- 08/21/2008: Added more keywords (thanks Rob Russell and Ray Cologon)
+- 02/25/2025: Added .fmfn extension; added square brackets; removed
+operators from identifier list; added new FileMaker functions
+and keywords from Claris website. Put under MIT License;  
+
+-->
+<dict>
+<key>BBEditDocumentType</key>
+<string>CodelessLanguageModule</string>
+<key>BBLMLanguageDisplayName</key>
+<string>FileMaker Calculation</string>
+<key>BBLMLanguageCode</key>
+<string>FMFN</string>
+<key>BBLMColorsSyntax</key>
+<true/>
+<key>BBLMScansFunctions</key>
+<false/>
+<key>BBLMIsCaseSensitive</key>
+<false/>
+<key>BBLMSuffixMap</key>
+<array>
+<dict>
+	<key>BBLMLanguageSuffix</key>
+	<string>.fmfn</string>
+</dict>
+<dict>
+	<key>BBLMLanguageSuffix</key>
+	<string>.fm7c</string>
+</dict>
+</array>
+<key>BBLMFileNamesToMatch</key>
+<array>
+<string>*.fmfn</string>
+<string>*.fm7c</string>
+</array>
+<key>Language Features</key>
+<dict>
+<key>Prefix for Functions</key>
+<string></string>
+<key>Identifier and Keyword Characters</key>
+<string>$ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_</string>
+<key>Prefix for Procedures</key>
+<string></string>
+<key>Open Parameter Lists</key>
+<string>[</string>
+<key>Close Parameter Lists</key>
+<string>]</string>
+<key>Terminator for Prototypes 1</key>
+<string></string>
+<key>Terminator for Prototypes 2</key>
+<string></string>
+<key>Open Statement Blocks</key>
+<string>(</string>
+<key>Close Statement Blocks</key>
+<string>)</string>
+<key>Open Block Comments</key>
+<string>/*</string>
+<key>Close Block Comments</key>
+<string>*/</string>
+<key>Open Line Comments</key>
+<string>//</string>
+<key>Open Strings 1</key>
+<string>&quot;</string>
+<key>Close Strings 1</key>
+<string>&quot;</string>
+<key>Escape Char in Strings 1</key>
+<string>\</string>
+<key>End-of-line Ends Strings 1</key>
+<false/>
+<key>Open Strings 2</key>
+<string></string>
+<key>Close Strings 2</key>
+<string></string>
+<key>Escape Char in Strings 2</key>
+<string></string>
+<key>End-of-line Ends Strings 2</key>
+<false/>
+</dict>
+<key>BBLMKeywordList</key>
+<array>
+<string>or</string>
+<string>and</string>
+<string>not</string>
+<string>xor</string>
+<string>True</string>
+<string>False</string>
+<string>Abs</string>
+<string>Acos</string>
+<string>Asin</string>
+<string>Atan</string>
+<string>Average</string>
+<string>Base64Decode</string>
+<string>Base64Encode</string>
+<string>Base64EncodeRFC</string>
+<string>BaseTableIDs</string>
+<string>BaseTableNames</string>
+<string>Case</string>
+<string>Ceiling</string>
+<string>Char</string>
+<string>Choose</string>
+<string>Code</string>
+<string>Combination</string>
+<string>ComputeModel</string>
+<string>ConvertFromFileMakerPath</string>
+<string>ConvertToFileMakerPath</string>
+<string>Cos</string>
+<string>CosineSimilarity</string>
+<string>Count</string>
+<string>CryptAuthCode</string>
+<string>CryptDecrypt</string>
+<string>CryptDecryptBase64</string>
+<string>CryptDigest</string>
+<string>CryptEncrypt</string>
+<string>CryptEncryptBase64</string>
+<string>CryptGenerateSignature</string>
+<string>CryptVerifySignature</string>
+<string>DatabaseNames</string>
+<string>Date</string>
+<string>Day</string>
+<string>DayName</string>
+<string>DayNameJ</string>
+<string>DayOfWeek</string>
+<string>DayOfYear</string>
+<string>Degrees</string>
+<string>Div</string>
+<string>Evaluate</string>
+<string>EvaluationError</string>
+<string>Exact</string>
+<string>ExecuteSQL</string>
+<string>ExecuteSQLe</string>
+<string>Exp</string>
+<string>Extend</string>
+<string>Factorial</string>
+<string>FieldBounds</string>
+<string>FieldComment</string>
+<string>FieldIDs</string>
+<string>FieldNames</string>
+<string>FieldRepetitions</string>
+<string>FieldStyle</string>
+<string>FieldType</string>
+<string>Filter</string>
+<string>FilterValues</string>
+<string>Floor</string>
+<string>Furigana</string>
+<string>FV</string>
+<string>Get</string>
+<string>GetAddonInfo</string>
+<string>GetAsBoolean</string>
+<string>GetAsCSS</string>
+<string>GetAsDate</string>
+<string>GetAsNumber</string>
+<string>GetAsSVG</string>
+<string>GetAsText</string>
+<string>GetAsTime</string>
+<string>GetAsTimestamp</string>
+<string>GetAsURLEncoded</string>
+<string>GetAVPlayerAttribute</string>
+<string>GetBaseTableName</string>
+<string>GetContainerAttribute</string>
+<string>GetEmbedding</string>
+<string>GetEmbeddingAsFile</string>
+<string>GetEmbeddingAsText</string>
+<string>GetField</string>
+<string>GetFieldName</string>
+<string>GetHeight</string>
+<string>GetLayoutObjectAttribute</string>
+<string>GetLayoutObjectOwnerInfo</string>
+<string>GetLiveText</string>
+<string>GetLiveTextAsJSON</string>
+<string>GetModelAttributes</string>
+<string>GetNextSerialValue</string>
+<string>GetNthRecord</string>
+<string>GetRepetition</string>
+<string>GetSensor</string>
+<string>GetSummary</string>
+<string>GetTableDDL</string>
+<string>GetThumbnail</string>
+<string>GetTokenCount</string>
+<string>GetValue</string>
+<string>GetWidth</string>
+<string>AccountExtendedPrivileges</string>
+<string>AccountGroupName</string>
+<string>AccountName</string>
+<string>AccountPrivilegeSetName</string>
+<string>AccountType</string>
+<string>ActiveFieldContents</string>
+<string>ActiveFieldName</string>
+<string>ActiveFieldTableName</string>
+<string>ActiveLayoutObjectName</string>
+<string>ActiveModifierKeys</string>
+<string>ActivePortalRowNumber</string>
+<string>ActiveRecordNumber</string>
+<string>ActiveRepetitionNumber</string>
+<string>ActiveSelectionSize</string>
+<string>ActiveSelectionStart</string>
+<string>AllowAbortState</string>
+<string>AllowFormattingbarState</string>
+<string>ApplicationArchitecture</string>
+<string>ApplicationLanguage</string>
+<string>ApplicationVersion</string>
+<string>CacheFileName</string>
+<string>CacheFilePath</string>
+<string>CalculationRepetitionNumber</string>
+<string>ConnectionAttributes</string>
+<string>ConnectionState</string>
+<string>CurrentDate</string>
+<string>CurrentExtendedPrivileges</string>
+<string>CurrentHostTimestamp</string>
+<string>CurrentPrivilegeSetName</string>
+<string>CurrentTime</string>
+<string>CurrentTimestamp</string>
+<string>CurrentTimeUTCMicroseconds</string>
+<string>CurrentTimeUTCMilliseconds</string>
+<string>CustomMenuSetName</string>
+<string>DesktopPath</string>
+<string>Device</string>
+<string>DocumentsPath</string>
+<string>DocumentsPathListing</string>
+<string>EncryptionState</string>
+<string>ErrorCaptureState</string>
+<string>FileLocaleElements</string>
+<string>FilemakerPath</string>
+<string>FileName</string>
+<string>FilePath</string>
+<string>FileSize</string>
+<string>FoundCount</string>
+<string>HighContrastState</string>
+<string>HostApplicationVersion</string>
+<string>HostIPAddress</string>
+<string>HostName</string>
+<string>InstalledFMPlugins</string>
+<string>InstalledFMPluginsAsJSON</string>
+<string>LastError</string>
+<string>LastErrorDetail</string>
+<string>LastErrorLocation</string>
+<string>LastMessageChoice</string>
+<string>LastStepTokensUsed</string>
+<string>LayoutAccess</string>
+<string>LayoutCount</string>
+<string>LayoutName</string>
+<string>LayoutNumber</string>
+<string>LayoutTableName</string>
+<string>LayoutViewState</string>
+<string>MenubarState</string>
+<string>ModifiedFields</string>
+<string>MultiUserState</string>
+<string>NetworkProtocol</string>
+<string>NetworkType</string>
+<string>OpenDataFileInfo</string>
+<string>PageCount</string>
+<string>PageNumber</string>
+<string>PersistentID</string>
+<string>PreferencesPath</string>
+<string>PrinterName</string>
+<string>QuickFindText</string>
+<string>RecordAccess</string>
+<string>RecordID</string>
+<string>RecordModificationCount</string>
+<string>RecordNumber</string>
+<string>RecordOpenCount</string>
+<string>RecordOpenState</string>
+<string>RegionMonitorEvents</string>
+<string>RequestCount</string>
+<string>RequestOmitState</string>
+<string>RevertTransactionOnErrorState</string>
+<string>ScreenDepth</string>
+<string>ScreenHeight</string>
+<string>ScreenScaleFactor</string>
+<string>ScreenWidth</string>
+<string>ScriptAnimationState</string>
+<string>ScriptName</string>
+<string>ScriptParameter</string>
+<string>ScriptResult</string>
+<string>SessionIdentifier</string>
+<string>SortState</string>
+<string>StatusAreaState</string>
+<string>SystemAppearance</string>
+<string>SystemDrive</string>
+<string>SystemIPAddress</string>
+<string>SystemLanguage</string>
+<string>SystemLocaleElements</string>
+<string>SystemNICAddress</string>
+<string>SystemPlatform</string>
+<string>SystemStorageAvailable</string>
+<string>SystemVersion</string>
+<string>TemporaryPath</string>
+<string>TextRulerVisible</string>
+<string>TotalRecordCount</string>
+<string>TouchKeyboardState</string>
+<string>TransactionOpenState</string>
+<string>TriggerCurrentPanel</string>
+<string>TriggerExternalEvent</string>
+<string>TriggerGestureInfo</string>
+<string>TriggerKeystroke</string>
+<string>TriggerModifierKeys</string>
+<string>TriggerTargetPanel</string>
+<string>UserCount</string>
+<string>UserName</string>
+<string>UseSystemFormatsState</string>
+<string>UUID</string>
+<string>UUIDNumber</string>
+<string>WindowContentHeight</string>
+<string>WindowContentWidth</string>
+<string>WindowDesktopHeight</string>
+<string>WindowDesktopWidth</string>
+<string>WindowHeight</string>
+<string>WindowLeft</string>
+<string>WindowMode</string>
+<string>WindowName</string>
+<string>WindowOrientation</string>
+<string>WindowStyle</string>
+<string>WindowTop</string>
+<string>WindowVisible</string>
+<string>WindowWidth</string>
+<string>WindowZoomLevel</string>
+<string>HexDecode</string>
+<string>HexEncode</string>
+<string>Hiragana</string>
+<string>Hour</string>
+<string>If</string>
+<string>Int</string>
+<string>IsEmpty</string>
+<string>IsValid</string>
+<string>IsValidExpression</string>
+<string>JSONDeleteElement</string>
+<string>JSONFormatElements</string>
+<string>JSONGetElement</string>
+<string>JSONGetElementType</string>
+<string>JSONListKeys</string>
+<string>JSONListValues</string>
+<string>JSONMakeArray</string>
+<string>JSONSetElement</string>
+<string>KanaHankaku</string>
+<string>KanaZenkaku</string>
+<string>KanjiNumeral</string>
+<string>Katakana</string>
+<string>Last</string>
+<string>LayoutIDs</string>
+<string>LayoutNames</string>
+<string>LayoutObjectNames</string>
+<string>LayoutObjectUUID</string>
+<string>Left</string>
+<string>LeftValues</string>
+<string>LeftWords</string>
+<string>Length</string>
+<string>Let</string>
+<string>Lg</string>
+<string>List</string>
+<string>Ln</string>
+<string>Location</string>
+<string>LocationValues</string>
+<string>Log</string>
+<string>Lookup</string>
+<string>LookupNext</string>
+<string>Lower</string>
+<string>Max</string>
+<string>Middle</string>
+<string>MiddleValues</string>
+<string>MiddleWords</string>
+<string>Min</string>
+<string>Minute</string>
+<string>Mod</string>
+<string>Month</string>
+<string>MonthName</string>
+<string>MonthNameJ</string>
+<string>NPV</string>
+<string>NumToJText</string>
+<string>PatternCount</string>
+<string>Pi</string>
+<string>PMT</string>
+<string>Position</string>
+<string>Proper</string>
+<string>PV</string>
+<string>Quote</string>
+<string>Radians</string>
+<string>Random</string>
+<string>RangeBeacons</string>
+<string>ReadQRCode</string>
+<string>RelationInfo</string>
+<string>Replace</string>
+<string>RGB</string>
+<string>Right</string>
+<string>RightValues</string>
+<string>RightWords</string>
+<string>RomanHankaku</string>
+<string>RomanZenkaku</string>
+<string>Round</string>
+<string>ScriptIDs</string>
+<string>ScriptNames</string>
+<string>Seconds</string>
+<string>Self</string>
+<string>SerialIncrement</string>
+<string>SetPrecision</string>
+<string>SetRecursion</string>
+<string>Sign</string>
+<string>Sin</string>
+<string>SortValues</string>
+<string>Sqrt</string>
+<string>StDev</string>
+<string>StDevP</string>
+<string>Substitute</string>
+<string>Sum</string>
+<string>TableIDs</string>
+<string>TableNames</string>
+<string>Tan</string>
+<string>TextColor</string>
+<string>TextColorRemove</string>
+<string>TextDecode</string>
+<string>TextEncode</string>
+<string>TextFont</string>
+<string>TextFontRemove</string>
+<string>TextFormatRemove</string>
+<string>TextSize</string>
+<string>TextSizeRemove</string>
+<string>TextStyleAdd</string>
+<string>TextStyleRemove</string>
+<string>Time</string>
+<string>Timestamp</string>
+<string>Trim</string>
+<string>TrimAll</string>
+<string>Truncate</string>
+<string>UniqueValues</string>
+<string>Upper</string>
+<string>ValueCount</string>
+<string>ValueListIDs</string>
+<string>ValueListItems</string>
+<string>ValueListNames</string>
+<string>Variance</string>
+<string>VarianceP</string>
+<string>VerifyContainer</string>
+<string>WeekOfYear</string>
+<string>WeekOfYearFiscal</string>
+<string>While</string>
+<string>WindowNames</string>
+<string>WordCount</string>
+<string>Year</string>
+<string>YearName</string>
+<string>Roman</string>
+<string>Greek</string>
+<string>Cyrillic</string>
+<string>CentralEurope</string>
+<string>ShiftJIS</string>
+<string>TraditionalChinese</string>
+<string>SimplifiedChinese</string>
+<string>OEM</string>
+<string>Symbol</string>
+<string>Other</string>
+<string>plain</string>
+<string>lower</string>
+<string>higher</string>
+<string>strikethrough</string>
+<string>smallcaps</string>
+<string>superscript</string>
+<string>subscript</string>
+<string>uppercase</string>
+<string>lowercase</string>
+<string>titlecase</string>
+<string>wordunderline</string>
+<string>doubleunderline</string>
+<string>bold</string>
+<string>italic</string>
+<string>underline</string>
+<string>condense</string>
+<string>extend</string>
+<string>allstyles</string>
+</array>
+</dict>
+</plist>
